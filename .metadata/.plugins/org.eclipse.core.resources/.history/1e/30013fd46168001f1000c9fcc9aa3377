@@ -1,0 +1,48 @@
+package practice_ll;
+
+//import linkedList_1.Node2;
+
+class Node{
+	Node next;
+	int data;
+	Node(int data){
+		this.data=data;
+		this.next=null;
+	}
+}
+public class Prog1 {
+	//static Node head;
+	public static void traverse(Node head) {
+		Node curr=head;
+		while(curr!=null) {
+			System.out.print(curr.next+" ");
+			curr=curr.next;
+			//System.out.println();
+		}
+		System.out.println();
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Node head = new Node(2);
+//        head.next = new Node(3);
+//        head.next.next = new Node(4);
+//        head.next.next.next = new Node(5);
+//        head.next.next.next.next = new Node(6);
+//
+//        // Printing the above list
+//        System.out.print("Linked List:");
+//        traverse(head);
+        Node head=new Node(1);
+		Node second=new Node(2);
+		Node third=new Node(3);
+		
+		//connect nodes
+		head.next=second;
+		second.next=third;
+		traverse(head);
+
+	}
+
+}
